@@ -9,8 +9,7 @@ import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
-// project imports
-import Logo from 'components/Logo';
+
 
 const AuthWrapper = ({ children }) => {
   const theme = useTheme();
@@ -29,7 +28,6 @@ const AuthWrapper = ({ children }) => {
                 }}>
                   <CardContent sx={{ p: 4 }}>
                     <Box sx={{ mb: 3, display: 'flex', justifyContent: 'center' }}>
-                      <Logo />
                     </Box>
                     {children}
                   </CardContent>
