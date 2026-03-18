@@ -63,7 +63,7 @@ import BulbOutlined from '@ant-design/icons/BulbOutlined';
 import CheckCircleOutlined from '@ant-design/icons/CheckCircleOutlined';
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://startupinsight.onrender.com/api';
 
 // Workflow steps
 const workflowSteps = [

@@ -70,7 +70,7 @@ import {
 } from 'recharts';
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://startupinsight.onrender.com/api';
 
 const COLORS = ['#00E676', '#2196F3', '#FF9800', '#FF5252', '#FFD700', '#9C27B0'];
 
