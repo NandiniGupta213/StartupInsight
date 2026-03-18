@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Box, Typography } from '@mui/material';
 
 // project imports
 import DrawerHeaderStyled from './DrawerHeaderStyled';
@@ -15,10 +16,27 @@ export default function DrawerHeader({ open }) {
         width: 'initial',
         paddingTop: '8px',
         paddingBottom: '8px',
-        paddingLeft: open ? '24px' : 0
+        paddingLeft: open ? '24px' : 0,
+        display: 'flex',
+        alignItems: 'center',
+        gap: 1
       }}
     >
-      <Logo isIcon={!open} sx={{ width: open ? 'auto' : 35, height: 35 }} />
+     
+      
+      {open && (
+        <Typography
+          variant="h3"
+          sx={{
+            color: '#00E676',
+            bgcolor:'#00E676',
+            fontWeight: 600,
+            letterSpacing: '0.7px'
+          }}
+        >
+          StartupInsight
+        </Typography>
+      )}
     </DrawerHeaderStyled>
   );
 }
