@@ -13,7 +13,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import InputAdornment from '@mui/material/InputAdornment';
 
 // project imports
-import AuthWrapper from 'sections/auth/AuthWrapper';
+import AuthWrapper from '../auth/AuthWrapper';  // Same import as login page
 
 export default function Register() {
   const navigate = useNavigate();
@@ -24,7 +24,6 @@ export default function Register() {
     email: '',
     password: '',
     confirmPassword: ''
-    // role removed - will default to 3 on backend
   });
   
   const [showPassword, setShowPassword] = useState(false);
@@ -74,7 +73,6 @@ export default function Register() {
       email: formData.email,
       password: formData.password,
       confirmPassword: formData.confirmPassword
-      // role not sent - backend will set default
     });
 
     setLoading(false);
@@ -179,8 +177,6 @@ export default function Register() {
                   type={showPassword ? 'text' : 'password'}
                   value={formData.password}
                   onChange={handleChange}
-                  error={!!passwordError}
-                  helperText={passwordError}
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
@@ -206,8 +202,7 @@ export default function Register() {
                       '&:hover fieldset': { borderColor: '#00E676' },
                       '&.Mui-focused fieldset': { borderColor: '#00E676' }
                     },
-                    '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.5)' },
-                    '& .MuiFormHelperText-root': { color: '#FF5252' }
+                    '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.5)' }
                   }}
                 />
               </Grid>
@@ -264,7 +259,6 @@ export default function Register() {
                     py: 1.5,
                     fontSize: '1rem',
                     fontWeight: 600,
-                    mt: 2,
                     '&:hover': { bgcolor: '#00C853' },
                     '&.Mui-disabled': { bgcolor: 'rgba(0,230,118,0.3)' }
                   }}
